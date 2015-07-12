@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Town Hall | Campaigns</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/ratchet.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/ratchet.min.js"></script>
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+
+    <header class="bar bar-nav">
+      <a class="icon icon-bars pull-right"></a>
+      <span class="menu-label pull-right">MENU</span>
+      <h1 class="title">Town Hall</h1>
+
+      <div class="bar bar-standard bar-header-secondary">
+          <button class="btn btn-filter pull-left">
+            <a href="#myPopover">
+              <img src="img/filter.png" width="26" height="23">
+            </a>
+          </button>
+          <button class="btn btn-compose pull-right">
+            <img src="img/compose.png" width="24" height="24">
+          </button>
+          <div class="segmented-control">
+            <a href="/agenda.html" class="control-item" data-transition="fade">Agenda</a>
+            <a href="/index.html" class="control-item active" data-transition="fade">Campaigns</a>
+          </div>
+      </div>
+    </header>
+
+    <div id="myPopover" class="popover">
+      <header class="bar bar-nav">
+        <h1 class="title">Filter Campaign View</h1>
+      </header>
+      <ul class="table-view">
+        <li class="table-view-cell">Show Top Voted</li>
+        <li class="table-view-cell">Show New Items</li>
+      </ul>
+    </div>
+
+    <div class="content">
+
+      <ul class="table-view">
+
+        <li class="table-view-cell media">
+          <div class="media-body">
+            Comment goes here.
+            <p class="body-metadata">9 hrs ago by Chinotto <img src="img/allstarbadge.png" class="all-star-badge" width-"62" height="15"></p>
+            <p class="comments-flag"><span class="comments">33 Comments</span> <span class="divider">|</span> Share <span class="divider">|</span> <a href="#" class="flag">Flag</a></p>
+          </div>
+          <span class="vote-block">
+            <div style="position:relative;">
+              <span class="upvote"></span>
+              <span class="vote-count">71</span>
+              <span class="downvote"></span>
+            </div>
+          </span>
+        </li>
+
+        <li class="table-view-cell share-twitter-element media">
+          <div class="media-body">
+            Whoa <a href="#" class="company">@Dice.com</a> "find the hottest tech talent" w/ male devs in their underwear. What if they were women?!
+            <img src="img/dice-ad.png" width="172" height="63" class="media-img">
+            <p class="body-metadata">9 hrs ago by Lunisia <img src="img/allstarbadge.png" class="all-star-badge" width-"62" height="15"></p>
+            <div class="comments-flag">
+              <span class="comments">20 Comments</span> 
+              <span class="divider">|</span> 
+              <a href="#" class="share-link">Share</a> 
+              <span class="divider">|</span> 
+              <a href="#flagConsole" class="flag">Flag</a>
+            </div>
+          </div>
+          <span class="vote-block">
+            <div style="position:relative;">
+              <span class="upvote"></span>
+              <span class="vote-count">70</span>
+              <span class="downvote"></span>
+            </div>
+          </span>
+        </li>
+
+        <!-- Modal Demo -->
+        <div id="flagConsole" class="modal">
+          <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#flagConsole"></a>
+            <h1 class="title">Flag Content</h1>
+          </header>
+
+          <div class="content">
+
+            <div class="content">
+              <ul class="table-view">
+                <li class="table-view-cell">
+                    <input type="checkbox" /> Disrespectful Behavior
+                </li>
+                <li class="table-view-cell">
+                    <input type="checkbox" /> Harrassment
+                </li>
+                <li class="table-view-cell">
+                    <input type="checkbox" /> Spam
+                </li>
+                <li class="table-view-cell">
+                    <input type="checkbox" /> Other (Please Describe Below)
+                </li>
+              </ul>
+
+              <div class="form-bottom">
+                <textarea rows="3"></textarea>
+                <button class="btn btn-positive btn-block">Submit Flag Report</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Modal Demo -->
+
+        <!-- Share Button Demo -->
+        <a href="#" class="share-obj">
+          <div class="share-twitter">
+            <p class="share-twitter-copy"><img class="share-twitter-logo" src="img/twitter-logo.png" width="22" height="18"> Share Campaign on Twitter</p>
+            <a class="share-close icon icon-close pull-right" href="#"></a>
+          </div>
+        </a>
+        <!-- End Share Button Demo -->
+
+        <li class="table-view-cell media">
+          <div class="media-body">
+            Comment goes here.
+            <p class="body-metadata">9 hrs ago by Chinotto <img src="img/allstarbadge.png" class="all-star-badge" width-"62" height="15"></p>
+            <p class="comments-flag"><span class="comments">21 Comments</span> <span class="divider">|</span> Share <span class="divider">|</span> <a href="#" class="flag">Flag</a></p>
+          </div>
+          <span class="vote-block">
+            <div style="position:relative;">
+              <span class="upvote"></span>
+              <span class="vote-count">50</span>
+              <span class="downvote"></span>
+            </div>
+          </span>
+        </li>
+
+        <li class="table-view-cell media">
+          <div class="media-body">
+            Comment goes here.
+            <p class="body-metadata">9 hrs ago by QuelloVero</p>
+            <p class="comments-flag"><span class="comments">37 Comments</span> <span class="divider">|</span> Share <span class="divider">|</span> <a href="#" class="flag">Flag</a></p>
+          </div>
+          <span class="vote-block">
+            <div style="position:relative;">
+              <span class="upvote"></span>
+              <span class="vote-count">41</span>
+              <span class="downvote"></span>
+            </div>
+          </span>
+        </li>
+
+
+      </ul>
+    </div><!-- /.content -->
+
+    <!-- Settings modal -->
+    <div id="settingsModal" class="modal">
+      <header class="bar bar-nav">
+        <a class="icon icon-close pull-right" href="#settingsModal"></a>
+        <h1 class="title">Settings</h1>
+      </header>
+
+      <div class="content">
+        <form class="input-group">
+          <input type="text" placeholder="Full name">
+          <input type="email" placeholder="Email">
+          <input type="text" placeholder="Username">
+        </form>
+
+        <h5 class="content-padded">App settings</h5>
+
+        <ul class="table-view">
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-sound"></span>
+            <div class="media-body">
+              Enable sounds
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+          <li class="table-view-cell media">
+            <span class="media-object pull-left icon icon-person"></span>
+            <div class="media-body">
+              Parental controls
+            </div>
+            <div class="toggle">
+              <div class="toggle-handle"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="content-padded">
+          <button class="btn btn-positive btn-block">Save settings</button>
+        </div>
+      </div>
+    </div><!-- /.modal -->
+
+  </body>
+</html>
