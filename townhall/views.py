@@ -10,7 +10,11 @@ import checkText
 
 @app.route('/', methods=['GET', 'POST'])
 def land():
-	return render_template("landing.html")
+	return render_template("index.html")
+
+@app.route('/agenda', methods=['GET', 'POST'])
+def agenda():
+	return render_template("agenda.html")
 
 @app.route('/admin', methods=['GET', 'POST'])
 def admin():
