@@ -10,9 +10,11 @@ import checkText
 
 @app.route('/', methods=['GET', 'POST'])
 def land():
-	# campaigns, agenda = dbhandler.get_campaigns_agenda();
+	return render_template("landing.html")
 
-	return render_template("landing.html")#, campaigns = campaigns, agenda = agenda)
+@app.route('/admin', methods=['GET', 'POST'])
+def admin():
+	return render_template("admin.html")
 
 @app.route('/new', methods=['GET'])
 def create():
