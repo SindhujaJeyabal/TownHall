@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Town Hall | Agenda</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="../static/css/ratchet.min.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../static/js/ratchet.min.js"></script>
+    <script src="../static/js/custom.js"></script>
+    <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  </head>
+  <body>
+
+    <header class="bar bar-nav">
+      <a class="icon icon-bars pull-right"></a>
+      <span class="menu-label pull-right">MENU</span>
+      <h1 class="title">Town Hall</h1>
+
+      <div class="bar bar-standard bar-header-secondary">
+          <button class="btn btn-filter pull-left">
+            <a href="#"><!-- NEED TO GO BACK -->
+              <img src="../static/img/back.png" width="20" height="18">
+            </a>
+          </button>
+          <h1 class="header">Create New Campaign</h1>
+      </div>
+    </header>
+
+    <div class="content">
+      <div class="create-campaign">
+        <form name="create" action="/new" method="POST">
+          <textarea rows="5" name="campaign_text" placeholder="Your Observation or Experience..."></textarea>
+          <input type="text" placeholder="Search for Company...">
+          <input type="submit" value="Post New Campaign" class="btn btn-positive btn-block">
+        </form>
+
+        {% if is_new == False and can_post == False %}
+          <p style="color:red"><strong>ERROR!</strong> We've detected potentially inappropriate language.<br/>Please be considerate at Town Hall.</p>
+        {% endif %}
+
+      </div>
+    </div><!-- /.content -->
+
+
+  </body>
+</html>
