@@ -401,6 +401,24 @@ textarea, input {
 }
 
 
+
+
+/* ADMIN */
+#admin-message {
+	height: 85px;
+	background-color: #84E3F8;
+	border-bottom: 3px solid #7547D9;
+}
+
+#admin-message p {
+	color: #7547D9;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+
+
+
 .slider {
   margin-bottom: 0;
 }
