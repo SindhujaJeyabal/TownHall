@@ -209,4 +209,15 @@
     </div><!-- /.modal -->
 
   </body>
+
+  <script>
+    $('.upvote').click( function() {
+      $(this).closest('.vote-block').find('.vote-count').text((parseInt($(this).closest('.vote-block').find('.vote-count').text()) + 1).toString());
+    });
+
+    $('.downvote').click( function() {
+      $(this).closest('.vote-block').find('.vote-count').text((parseInt($(this).closest('.vote-block').find('.vote-count').text()) - 1).toString());
+    });
+
+  </script>
 </html>
