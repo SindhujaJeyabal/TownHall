@@ -24,21 +24,18 @@ def agenda():
 def admin():
 	return render_template("admin.html")
 
+@app.route('/flagged', methods=['GET'])
+def flagged():
+	return render_template("flagged.html")
+
 @app.route('/new', methods=['GET'])
 def create():
 	print "creating a post...."
 	return render_template("campaign.html", is_new = True, can_post = True)
 
-@app.route('/flagged', methods=['GET'])
-def flagged():
-	return render_template("flagged.html")
-
-@app.route('/new', methods=['POST'])
+@app.route('/error', methods=['GET'])
 def check_abuse():
-	n = request.form.get('campaign_text')
-	# app.send_static_file
-	print n
 	can_post = True
-	can_post = checkText.is_abusive(n)
+	can_post = checkText.is_abusive("Stephanie Marc is bad")
 	print can_post
-	return render_template("campaign.html", is_new = False, can_post = can_post)
+	return render_template("campaign_error.html", is_new = False, can_post = False)

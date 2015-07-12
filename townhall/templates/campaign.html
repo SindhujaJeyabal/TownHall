@@ -32,8 +32,8 @@
 
     <div class="content">
       <div class="create-campaign">
-        <form name="create" action="/new" method="POST">
-          <textarea rows="5" name="campaign_text" placeholder="Your Observation or Experience..."></textarea>
+        <form name="create" action="/error" method="GET">
+          <textarea id = "post_text" rows="5" name="campaign_text" placeholder="Your Observation or Experience..."></textarea>
           <input type="text" list="datalist1" class = "company" placeholder="Search for Company...">
 
           <datalist id="datalist1">
@@ -57,4 +57,11 @@
       </div>
     </div><!-- /.content -->
   </body>
+
+  <script>
+    $('#post_text').focus( function () {]
+      $(this).text("Stephanie Marc is horrible!..");
+    })
+  </script>
+
 </html>

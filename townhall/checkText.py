@@ -15,7 +15,7 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))   # refers to application_
 APP_STATIC = os.path.join(APP_ROOT, 'static')
 
 def getTokens(text):
-    return [string.translate(word.lower(),string.punctuation) for word in word_tokenize(text)]
+    return word_tokenize(text)#[string.translate(word.lower(),string.punctuation) for word in word_tokenize(text)]
 
 def containsName(tokens):
     for i in tokens:
