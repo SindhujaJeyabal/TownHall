@@ -23,7 +23,11 @@ def admin():
 @app.route('/new', methods=['GET'])
 def create():
 	print "creating a post...."
-	return render_template("create.html", is_new = True, can_post = True)
+	return render_template("campaign.html", is_new = True, can_post = True)
+
+@app.route('/flagged', methods=['GET'])
+def flagged():
+	return render_template("flagged.html")
 
 @app.route('/new', methods=['POST'])
 def check_abuse():
@@ -33,4 +37,4 @@ def check_abuse():
 	can_post = True
 	can_post = checkText.is_abusive(n)
 	print can_post
-	return render_template("create.html", is_new = False, can_post = can_post)
+	return render_template("campaign.html", is_new = False, can_post = can_post)
