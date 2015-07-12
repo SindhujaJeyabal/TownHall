@@ -34,7 +34,19 @@
       <div class="create-campaign">
         <form name="create" action="/new" method="POST">
           <textarea rows="5" name="campaign_text" placeholder="Your Observation or Experience..."></textarea>
-          <input type="text" placeholder="Search for Company...">
+          <input type="text" list="datalist1" class = "company" placeholder="Search for Company...">
+
+          <datalist id="datalist1">
+            <option value="dice">
+            <option value="facebook">
+            <option value="google">
+            <option value="yahoo">
+            <option value="apple">
+            <option value="twitter">
+            <option value="salesforce">
+            <option value="splunk">
+            <option value="surveymonkey">
+          </datalist>
           <input type="submit" value="Post New Campaign" class="btn btn-positive btn-block">
         </form>
 
@@ -44,7 +56,5 @@
 
       </div>
     </div><!-- /.content -->
-
-
   </body>
 </html>
