@@ -14,11 +14,18 @@
 </head>
 
 <body>
-
-<div id="container">
-	
-</div>
-
+	<div id ='container'>
+		<form name="create" action="/new" method="POST">
+			<input type="text" name="campaign_text" value='Type to post...'>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	{% if is_new == False and can_post == False %}
+		<p> ERROR, Be considerate </p>
+	{% endif %}
 </body>
 
+<script>
+
+</script>
 </html>

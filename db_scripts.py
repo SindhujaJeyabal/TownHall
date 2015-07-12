@@ -35,13 +35,13 @@ def create_comments_table():
 	conn.commit()
 	conn.close()
 
-def create_tables()
+def create_tables():
 	create_table_status_table();
 	create_table_profile_table();
 	create_campaigns_table();
 	create_comments_table();
 
-def populate_status_table()
+def populate_status_table():
 
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
@@ -51,7 +51,7 @@ def populate_status_table()
 	conn.commit()
 	conn.close()
 
-def populate_profiles_table()
+def populate_profiles_table():
 
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
@@ -63,7 +63,7 @@ def populate_profiles_table()
 	conn.commit()
 	conn.close()
 
-def populate_campaigns_table()
+def populate_campaigns_table():
 
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
@@ -79,7 +79,7 @@ def populate_campaigns_table()
 	conn.commit()
 	conn.close()
 
-def populate_comments_table()
+def populate_comments_table():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	objtoadd= [('1','1', 'comment....', '1'),
@@ -95,13 +95,13 @@ def populate_comments_table()
 	conn.close()
 
 
-def populate_tables()
+def populate_tables():
 	populate_status_table();
 	populate_profiles_table();
 	populate_campaigns_table();
 	populate_comments_table();
 
-def delete_status_table()
+def delete_status_table():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	query='delete * from status'
@@ -109,7 +109,7 @@ def delete_status_table()
 	conn.commit()
 	conn.close()
 
-def delete_profiles_table()
+def delete_profiles_table():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	query='delete * from profiles'
@@ -117,7 +117,7 @@ def delete_profiles_table()
 	conn.commit()
 	conn.close()
 
-def delete_campaigns_table()
+def delete_campaigns_table():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	query='delete * from campaigns'
@@ -125,7 +125,7 @@ def delete_campaigns_table()
 	conn.commit()
 	conn.close()
 
-def delete_comments_table()
+def delete_comments_table():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	query='delete * from comments'
@@ -133,13 +133,13 @@ def delete_comments_table()
 	conn.commit()
 	conn.close()
 
-def clear_tables()
+def clear_tables():
 	delete_status_table();
 	delete_profiles_table();
 	delete_campaigns_table();
 	delete_comments_table();
 
-def get_campaigns()
+def get_campaigns():
 	conn = sqlite3.connect(DB_PATH)
 	c = conn.cursor()
 	query='select * from campaigns'
@@ -147,7 +147,7 @@ def get_campaigns()
 	conn.commit()
 	conn.close() 	
 
-def get_agenda()
+# def get_agenda()
 
 if __name__ == '__main__':
 

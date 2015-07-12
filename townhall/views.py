@@ -6,9 +6,25 @@ import urllib2
 import math
 import json
 import dbhandler
+import checkText
 
 @app.route('/', methods=['GET', 'POST'])
 def land():
-	campaigns, agenda = dbhandler.get_campaigns_agenda();
+	# campaigns, agenda = dbhandler.get_campaigns_agenda();
 
-	return render_template("landing.html", campaigns = campaigns, agenda = agenda)
+	return render_template("landing.html")#, campaigns = campaigns, agenda = agenda)
+
+@app.route('/new', methods=['GET'])
+def create():
+	print "creating a post...."
+	return render_template("create.html", is_new = True, can_post = True)
+
+@app.route('/new', methods=['POST'])
+def check_abuse():
+	n = request.form.get('campaign_text')
+	# app.send_static_file
+	print n
+	can_post = True
+	can_post = checkText.is_abusive(n)
+	print can_post
+	return render_template("create.html", is_new = False, can_post = can_post)
