@@ -1,3 +1,13 @@
+from nltk.corpus import names,wordnet,movie_reviews
+from nltk.tokenize import word_tokenize
+from nltk.classify import NaiveBayesClassifier
+from random import shuffle
+from bs4 import BeautifulSoup
+import requests,re,string,os
+import nltk
+from collections import defaultdict
+import pickle
+
 def getTokens(text):
     return [word.lower().translate(None,string.punctuation) for word in word_tokenize(text)]
 
